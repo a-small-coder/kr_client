@@ -3,8 +3,8 @@ import "./App.css";
 import io from "socket.io-client";
 import { useEffect, useState } from "react";
 
-const socket1 = io.connect("http://localhost:3001");
-const socket2 = io.connect("http://localhost:3002");
+const socket1 = io.connect("http://85.193.88.165:3001");
+const socket2 = io.connect("http://85.193.88.165:3002");
 
 function App() {
    const [messageList, setMessageList] = useState([]);
