@@ -7,7 +7,7 @@ const socket1 = io.connect("http://85.193.88.165:3001");
 const socket2 = io.connect("http://85.193.88.165:3002");
 
 function App() {
-   const [messageList, setMessageList] = useState([]);
+   
 
    const [messageList2, setMessageList2] = useState([]);
 
@@ -31,10 +31,10 @@ function App() {
                <p className="chat-body__subtext">Выводит информацию о:</p>
                <ul>
                   <li className="chat-body__tasktext">
-                     архитектуру процессора
+                     архитектуре процессора
                   </li>
                   <li className="chat-body__tasktext">
-                     количество логических процессоров{" "}
+                     количестве логических процессоров в системе{" "}
                   </li>
                </ul>
                <div className="chat-body__view">
@@ -54,7 +54,13 @@ function App() {
                                     {messageContent.mes.task1}
                                  </p>
                                  <p className="message-content__text text-content">
-                                    {messageContent.mes.task2}
+                                    memory usage:<br/>
+                                    <ul>
+                                       {messageContent.mes.task2.map( (el, i) => (
+                                          <li key={i}>{el}</li>
+                                       ))}
+                                    </ul>
+                                    
                                  </p>
                               </div>
                               <div className="message-meta"></div>
@@ -93,7 +99,7 @@ function App() {
                      количестве процессов в системе
                   </li>
                   <li className="chat-body__tasktext">
-                     количестве модулей серверного процесса
+                     количестве используемой памяти
                   </li>
                </ul>
                <div className="chat-body__view">
