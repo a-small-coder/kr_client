@@ -9,6 +9,7 @@ const socket2 = io.connect("http://85.193.88.165:3002");
 function App() {
    
 
+   const [messageList, setMessageList] = useState([]);
    const [messageList2, setMessageList2] = useState([]);
 
    const sendMessage1 = async () => {
