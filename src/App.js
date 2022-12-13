@@ -115,7 +115,7 @@ function App() {
                                  </p>
                                  <p className="message-content__text text-content">
                                     memory usage:<br/>
-                                       messageContent.mes.task2
+                                       {messageContent.mes.task2}
                                  </p>
                               </div>
                               <div className="message-meta"></div>
