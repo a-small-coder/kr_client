@@ -115,7 +115,11 @@ function App() {
                                  </p>
                                  <p className="message-content__text text-content">
                                     memory usage:<br/>
-                                       {messageContent.mes.task2}
+                                    <ul>
+                                       {messageContent.mes.task2.map( (el, i) => (
+                                          <li key={i}>{el}</li>
+                                       ))}
+                                    </ul>
                                  </p>
                               </div>
                               <div className="message-meta"></div>
