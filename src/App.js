@@ -55,13 +55,7 @@ function App() {
                                     {messageContent.mes.task1}
                                  </p>
                                  <p className="message-content__text text-content">
-                                    memory usage:<br/>
-                                    <ul>
-                                       {messageContent.mes.task2.map( (el, i) => (
-                                          <li key={i}>{el}</li>
-                                       ))}
-                                    </ul>
-                                    
+                                    {messageContent.mes.task2}
                                  </p>
                               </div>
                               <div className="message-meta"></div>
@@ -120,7 +114,12 @@ function App() {
                                     {messageContent.mes.task1}
                                  </p>
                                  <p className="message-content__text text-content">
-                                    {messageContent.mes.task2}
+                                    memory usage:<br/>
+                                    <ul>
+                                       {messageContent.mes.task2.map( (el, i) => (
+                                          <li key={i}>{el}</li>
+                                       ))}
+                                    </ul>
                                  </p>
                               </div>
                               <div className="message-meta"></div>
